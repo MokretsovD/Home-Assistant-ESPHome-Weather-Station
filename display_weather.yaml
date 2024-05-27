@@ -83,7 +83,7 @@ display:
           // 50 percent at night
           br=0.5;
         }
-        // Swich first/second page on each update (every 5 seconds)
+        // Switch first/second page on each update (every 5 seconds)
         if (id(first_page)) {
           it.goto_page("forecast");
           it.send_command_printf("%s.pic=%.0f", "weather",id(today_icon).state);
@@ -108,7 +108,7 @@ display:
         br=0.0;
       }
       
-      // Change brightnes if it needs to be changed
+      // Change brightness if it needs to be changed
       if (id(current_brightness)!=br) {  
         it.set_backlight_brightness(br);
         id(current_brightness)=br;
